@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="currentPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.subCont.CategoryController">
+   <children>
+      <HBox layoutX="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="mainVBox" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" prefWidth="300.0" spacing="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label id="label-title" fx:id="lblTitle" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Tambah Kategori">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <StackPane>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox fx:id="vBoxOption" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0">
+                           <children>
+                              <JFXButton id="button-option" maxWidth="150.0" onAction="#btnMainAction" text="Kategori Utama" />
+                              <Label text="atau" />
+                              <JFXButton id="button-option" maxWidth="150.0" onAction="#btnSubAction" text="Sub kategori" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="vBoxAddMain" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <JFXTextField fx:id="txtMain" labelFloat="true" maxWidth="200.0" promptText="Kategori Utama" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="vBoxAddSub" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                           <children>
+                              <JFXComboBox fx:id="comboAddMain" labelFloat="true" maxWidth="200.0" promptText="Kategori Utama" />
+                              <JFXTextField fx:id="txtSub" labelFloat="true" maxWidth="200.0" promptText="Sub kategori" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="vBoxEditMain" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0">
+                           <children>
+                              <JFXTextField fx:id="txtEditMain" labelFloat="true" maxWidth="200.0" promptText="Kategori Utama" />
+                              <Label text="atau" />
+                              <JFXCheckBox fx:id="checkMain" text="Tukar sebagai Sub Kategori" />
+                              <JFXComboBox fx:id="comboCheckSub" labelFloat="true" maxWidth="200.0" promptText="Kategori Utama" />
+                           </children></VBox>
+                        <VBox fx:id="vBoxEditSub" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0">
+                           <children>
+                              <JFXComboBox fx:id="comboEditMain" labelFloat="true" maxWidth="200.0" promptText="Kategori Utama" />
+                              <JFXTextField fx:id="txtEditSub" labelFloat="true" maxWidth="200.0" promptText="Sub Kategori" />
+                              <Label text="atau" />
+                              <JFXCheckBox fx:id="checkSub" text="Tukar sebagai kategori Utama" />
+                           </children></VBox>
+                     </children>
+                  </StackPane>
+                  <VBox fx:id="vBoxControl" alignment="TOP_CENTER" spacing="15.0">
+                     <children>
+                        <JFXButton id="button-option" maxWidth="100.0" onAction="#backAction" text="Back">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="ARROW_LEFT" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="button-success" maxWidth="100.0" onAction="#saveAction" text="Save">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="SAVE" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="button-warning" maxWidth="100.0" onAction="#resetAction" text="Reset">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="UNDO" size="20" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox id="hBoxSearch" alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="5.0">
+                     <children>
+                        <JFXTextField fx:id="txtSearch" labelFloat="true" maxWidth="200.0" promptText="Cari" />
+                        <JFXButton fx:id="btnClear" contentDisplay="GRAPHIC_ONLY" onAction="#btnClearAction" text="Clear">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="REFRESH" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton contentDisplay="GRAPHIC_ONLY" text="Search">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="MAGNIFY" size="20" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <JFXTreeTableView fx:id="treeTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="478.0" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TreeTableColumn fx:id="colId" minWidth="0.0" prefWidth="99.0" text="ID" />
+                        <TreeTableColumn fx:id="colCat" prefWidth="148.0" text="Categories" />
+                        <TreeTableColumn fx:id="colSub" prefWidth="142.0" text="Main-Categories" />
+                        <TreeTableColumn fx:id="colProduct" prefWidth="49.0" text="Product" />
+                        <TreeTableColumn fx:id="colAction" prefWidth="200.0" text="Action" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </JFXTreeTableView>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

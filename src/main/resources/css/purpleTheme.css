@@ -1,0 +1,18 @@
+*{
+   dark-primary-color:#7B1FA2;
+   primary-color:#9C27B0;
+   light-primary-color:#E1BEE7;
+   accent-color:#03A9F4;
+   primary-text:#212121;
+   secondary-text:#757575;
+   text-icon:#FFFFFF;
+   divider-color:#BDBDBD;
+
+   success-color:#67976c;
+   warning-color:#FFA726;
+   danger-color:#D1495B;
+
+   success-color-dark:#486a4b;
+   warning-color-dark:#d98100;
+   danger-color-dark:#a4293a;
+}

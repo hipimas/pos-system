@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bdPane" prefHeight="550.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.cashierCont.CashierAdditionalOptionController">
+   <center>
+      <StackPane>
+         <children>
+            <AnchorPane fx:id="customerPane">
+               <children>
+                  <JFXListView fx:id="listView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                  <HBox id="hBoxSearch" alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="3.0">
+                     <children>
+                        <JFXTextField fx:id="txtSearch" labelFloat="true" maxWidth="200.0" promptText="Cari" />
+                        <JFXButton fx:id="btnClear" contentDisplay="GRAPHIC_ONLY" onAction="#btnClearAction" text="Clear">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="REFRESH" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btnSearch" contentDisplay="GRAPHIC_ONLY" text="Search">
+                           <graphic>
+                              <MaterialDesignIconView glyphName="MAGNIFY" size="20" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="paymentPane" StackPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" layoutX="14.0" layoutY="241.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton id="button-accent" fx:id="btnCash" contentDisplay="TOP" text="Cash">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/dollar1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="button-accent" fx:id="btnCc" contentDisplay="TOP" text="Credit Card">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/credit-card1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="button-accent" fx:id="btnCredit" contentDisplay="TOP" text="Credit">
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/invoice.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="priceLookPane" StackPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER_LEFT" layoutX="71.0" layoutY="188.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Price lookup">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <MaterialDesignIconView glyphName="HELP_CIRCLE_OUTLINE" />
+                           </children>
+                        </HBox>
+                        <HBox id="hBoxSearch" alignment="CENTER_LEFT" maxWidth="-Infinity" spacing="5.0">
+                           <children>
+                              <JFXTextField fx:id="txtBarcode" labelFloat="true" maxWidth="200.0" promptText="Barkod" />
+                              <JFXButton fx:id="btnClear1" contentDisplay="GRAPHIC_ONLY" onAction="#btnClearAction" text="Clear">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="REFRESH" size="20" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnSearch1" contentDisplay="GRAPHIC_ONLY" text="Search">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="MAGNIFY" size="20" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                        <Label fx:id="lblInfo" />
+                        <Label fx:id="lblPrice" maxWidth="200.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblName" maxWidth="200.0" wrapText="true" />
+                        <Label fx:id="lblDesc" />
+                        <Label fx:id="lblBrand" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </center>
+   <bottom>
+      <JFXToolbar BorderPane.alignment="CENTER">
+         <bottom>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton id="button-success" onAction="#saveAction" prefHeight="35.0" text="Done">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="CHECK" size="20" />
+                     </graphic></JFXButton>
+                  <JFXButton id="button-danger" onAction="#cancelAction" prefHeight="35.0" text="Cancel">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="CLOSE" size="20" />
+                     </graphic></JFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" right="5.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </JFXToolbar>
+   </bottom>
+   <left>
+      <VBox alignment="CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Pilihan &gt;&gt;" />
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <JFXButton id="button-accent-round" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#customerActon" text="Customers">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="ACCOUNT_SWITCH" size="25" />
+                     </graphic>
+                  </JFXButton>
+                  <Label text="Customers" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <JFXButton id="button-accent-round" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#paymentOption" text="Payment">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="CREDIT_CARD" size="25" />
+                     </graphic>
+                  </JFXButton>
+                  <Label text="Payment" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <JFXButton id="button-accent-round" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" text="Diskaun">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="PERCENT" size="25" />
+                     </graphic>
+                  </JFXButton>
+                  <Label text="Discount" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <JFXButton id="button-accent-round" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" onAction="#priceLookUpAction" text="Harga">
+                     <graphic>
+                        <MaterialDesignIconView glyphName="MAGNIFY" size="25" />
+                     </graphic>
+                  </JFXButton>
+                  <Label text="Price" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <top>
+      <Label text="Additional Options" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+   </top>
+</BorderPane>

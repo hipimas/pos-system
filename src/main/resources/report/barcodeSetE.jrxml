@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="barcodeSetF1" pageWidth="132" pageHeight="94" columnWidth="132" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="a132d007-337c-4d3e-bc1b-6696b52ec7fc">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapterBarcode.xml"/>
+	<parameter name="productName" class="java.lang.String"/>
+	<parameter name="productPrice" class="java.lang.String"/>
+	<parameter name="stringBarcode" class="java.lang.String"/>
+	<parameter name="unit" class="java.lang.String"/>
+	<parameter name="currentDate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="94" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<componentElement>
+				<reportElement stretchType="ContainerHeight" x="0" y="0" width="66" height="94" uuid="963c318b-f3eb-437b-ab41-e1d459ccee4e"/>
+				<jr:EAN13 xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" orientation="right">
+					<jr:codeExpression><![CDATA[$P{stringBarcode}]]></jr:codeExpression>
+				</jr:EAN13>
+			</componentElement>
+			<frame>
+				<reportElement x="66" y="0" width="66" height="94" uuid="2ffb5c79-c286-4bfb-87bf-0b72b1f676ea"/>
+				<textField>
+					<reportElement x="0" y="5" width="66" height="28" uuid="a1e62c3a-a96c-4d6c-a204-a7059a8ae9ce"/>
+					<textFieldExpression><![CDATA[$P{productName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="47" width="66" height="14" uuid="874f1501-ece8-4926-8d95-f1bd006ac45d"/>
+					<textFieldExpression><![CDATA[$P{productPrice}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="61" width="66" height="14" uuid="48ca1362-d485-4434-9bfd-857c3a93566b"/>
+					<textFieldExpression><![CDATA[$P{unit}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="33" width="66" height="14" uuid="4d25fd4c-6df2-486e-b460-c8e2b7d6b1f9"/>
+					<textFieldExpression><![CDATA[$P{currentDate}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

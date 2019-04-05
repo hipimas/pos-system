@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+
+<JFXDrawer fx:id="jfxDrawer" direction="BOTTOM" maxHeight="150.0" overLayVisible="false" prefHeight="150.0" prefWidth="50.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" />

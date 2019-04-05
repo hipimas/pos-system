@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import com.jfoenix.validation.ValidationFacade?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.subCont.PromotionController">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="mainVBox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="25.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Promosi dan Diskaun" textAlignment="CENTER" wrappingWidth="182.13671875" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+      
+                        <ValidationFacade fx:id="facadeCombo" alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT">
+                      <control>
+                        <JFXComboBox fx:id="comboType" prefWidth="250.0" promptText="Jenis" />
+                      </control>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ValidationFacade>
+                  <VBox fx:id="extraVBox" maxWidth="250.0" spacing="35.0" />
+                  <JFXDatePicker fx:id="dateStart" maxWidth="250.0" promptText="Mula" VBox.vgrow="ALWAYS" />
+                  <JFXDatePicker fx:id="dateEnd" maxWidth="250.0" promptText="Tamat" VBox.vgrow="ALWAYS" />
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="41.0" prefWidth="330.0" spacing="10.0">
+                     <children>
+                        <JFXButton id="button-success" fx:id="btnSave" onAction="#saveAction" text="Simpan">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="SAVE" size="20" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="button-warning" fx:id="btnReset" layoutX="10.0" layoutY="10.0" onAction="#resetAction" text="Reset">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="UNDO" size="20" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <JFXTreeTableView fx:id="treeTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="509.0" prefWidth="445.0" HBox.hgrow="ALWAYS">
+               <columns>
+                  <TreeTableColumn fx:id="colName" prefWidth="75.0" text="Promosi" />
+                  <TreeTableColumn fx:id="colType" prefWidth="75.0" text="Promosi" />
+                  <TreeTableColumn fx:id="colItem" prefWidth="91.0" text="Barang" />
+                  <TreeTableColumn fx:id="collAmount" prefWidth="59.0" text="Jumlah" />
+                  <TreeTableColumn fx:id="colStart" prefWidth="75.0" text="Mula" />
+                  <TreeTableColumn fx:id="colEnd" prefWidth="75.0" text="Tamat" />
+               </columns>
+            </JFXTreeTableView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

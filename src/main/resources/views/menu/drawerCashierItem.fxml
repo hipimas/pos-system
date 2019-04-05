@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" spacing="10.0" style="-fx-background-color: grey;">
+         <children>
+            <JFXButton id="button-transparent" fx:id="btnStart" contentDisplay="GRAPHIC_ONLY" onAction="#start" text="Start">
+               <graphic>
+                  <MaterialDesignIconView glyphName="PLAY" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton id="button-transparent" fx:id="btnAddCash" contentDisplay="GRAPHIC_ONLY" layoutX="17.0" layoutY="382.0" onAction="#addCash" text="Add">
+               <graphic>
+                  <MaterialDesignIconView glyphName="CURRENCY_USD" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton id="button-transparent" fx:id="btnDrawCash" contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="53.0" onAction="#drawCash" text="Draw">
+               <graphic>
+                  <MaterialDesignIconView glyphName="CURRENCY_USD_OFF" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton id="button-transparent" fx:id="btnLock" contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="96.0" onAction="#lock" text="Lock">
+               <graphic>
+                  <MaterialDesignIconView glyphName="LOCK" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton id="button-transparent" fx:id="btnLock1" contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="139.0" onAction="#stopCash" text="Lock">
+               <graphic>
+                  <MaterialDesignIconView glyphName="STOP" size="25" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</HBox>

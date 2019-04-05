@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<HBox xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" spacing="10.0" style="-fx-background-color: grey;">
+         <children>
+            <JFXButton id="button-transparent" contentDisplay="GRAPHIC_ONLY" text="Home">
+               <graphic>
+                  <MaterialDesignIconView glyphName="HOME" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton id="button-transparent" fx:id="btnTheme" contentDisplay="GRAPHIC_ONLY" layoutX="17.0" layoutY="382.0" text="Design">
+               <graphic>
+                  <MaterialDesignIconView glyphName="PALETTE" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton id="button-transparent" contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="53.0" text="Sync">
+               <graphic>
+                  <MaterialDesignIconView glyphName="SYNC" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton id="button-transparent" contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="96.0" text="Volume">
+               <graphic>
+                  <MaterialDesignIconView glyphName="VOLUME_HIGH" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton id="button-transparent" contentDisplay="GRAPHIC_ONLY" layoutX="15.0" layoutY="53.0" text="Security">
+               <graphic>
+                  <MaterialDesignIconView glyphName="SECURITY" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton id="button-transparent" fx:id="btnAccount" contentDisplay="GRAPHIC_ONLY" layoutX="17.0" layoutY="382.0" text="Account">
+               <graphic>
+                  <MaterialDesignIconView glyphName="ACCOUNT" size="25" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</HBox>

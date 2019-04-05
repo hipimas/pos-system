@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="currentPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.subCont.StatController">
+   <children>
+      <VBox fx:id="vBoxS" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TilePane alignment="CENTER" hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" tileAlignment="TOP_CENTER" vgap="5.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to right, #0ac282, #0df3a3);">
+                     <children>
+                        <Label layoutX="34.0" layoutY="169.0" text="updated :" />
+                        <MaterialDesignIconView glyphName="SHOPPING" layoutX="176.0" layoutY="65.0" size="60" />
+                        <Separator layoutY="159.0" maxWidth="1.7976931348623157E308" prefWidth="250.0" />
+                        <Label fx:id="lblProductCount" layoutX="14.0" layoutY="16.0" text="200 ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="43.0" text="products">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView glyphName="CLOCK" layoutX="13.0" layoutY="182.0" />
+                        <HBox alignment="CENTER" layoutX="46.0" layoutY="90.0" spacing="5.0">
+                           <children>
+                              <JFXButton contentDisplay="TOP" onAction="#productExportAction" text="export">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="FILE_EXPORT" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#importProductAction" text="import">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="FILE_IMPORT" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" text="print">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="PRINTER" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="310.0" layoutY="235.0" prefHeight="150.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to right, #fe5d70, #fe909d);">
+                     <children>
+                        <Label layoutX="31.0" layoutY="169.0" text="updated :" />
+                        <MaterialDesignIconView glyphName="DEVELOPER_BOARD" layoutX="176.0" layoutY="65.0" size="60" />
+                        <Separator layoutY="158.0" maxWidth="1.7976931348623157E308" prefWidth="250.0" />
+                        <Label fx:id="lblBrandCount" layoutX="14.0" layoutY="16.0" text="200 ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="43.0" text="brands">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView glyphName="CLOCK" layoutX="14.0" layoutY="182.0" />
+                        <HBox alignment="CENTER" layoutX="46.0" layoutY="90.0" spacing="5.0">
+                           <children>
+                              <JFXButton contentDisplay="TOP" onAction="#brandExportAction" text="export">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="FILE_EXPORT" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#importBrandAction" text="import">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="FILE_IMPORT" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" text="print">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="PRINTER" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="208.0" layoutY="235.0" prefHeight="150.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to right, #01a9ac, #01dbdf);">
+                     <children>
+                        <Label layoutX="27.0" layoutY="169.0" text="updated :" />
+                        <MaterialDesignIconView glyphName="TAG_MULTIPLE" layoutX="176.0" layoutY="65.0" size="60" />
+                        <Separator layoutY="158.0" maxWidth="1.7976931348623157E308" prefWidth="250.0" />
+                        <Label fx:id="lblCatCount" layoutX="14.0" layoutY="16.0" text="200 ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="43.0" text="categories">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView glyphName="CLOCK" layoutX="8.0" layoutY="182.0" />
+                        <HBox alignment="CENTER" layoutX="46.0" layoutY="91.0" spacing="5.0">
+                           <children>
+                              <JFXButton contentDisplay="TOP" onAction="#catExportAction" text="export">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="FILE_EXPORT" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#importCatAction" text="import">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="FILE_IMPORT" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" text="print">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="PRINTER" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="540.0" layoutY="10.0" prefHeight="150.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to right, #fe9365, #feb798);">
+                     <children>
+                        <Label layoutX="27.0" layoutY="169.0" text="updated :" />
+                        <MaterialDesignIconView glyphName="ACCOUNT_MULTIPLE" layoutX="176.0" layoutY="65.0" size="60" />
+                        <Separator layoutY="158.0" maxWidth="1.7976931348623157E308" prefWidth="250.0" />
+                        <Label fx:id="lblCatCount1" layoutX="14.0" layoutY="16.0" text="200 ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="43.0" text="customers">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView glyphName="CLOCK" layoutX="8.0" layoutY="182.0" />
+                        <HBox alignment="CENTER" layoutX="46.0" layoutY="91.0" spacing="5.0">
+                           <children>
+                              <JFXButton contentDisplay="TOP" text="export">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="FILE_EXPORT" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" text="import">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="FILE_IMPORT" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" text="print">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="PRINTER" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="285.0" layoutY="215.0" prefHeight="150.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to right, #c920fc, #cf3cfc);">
+                     <children>
+                        <Label layoutX="27.0" layoutY="169.0" text="updated :" />
+                        <MaterialDesignIconView glyphName="SALE" layoutX="176.0" layoutY="65.0" size="60" />
+                        <Separator layoutY="158.0" maxWidth="1.7976931348623157E308" prefWidth="250.0" />
+                        <Label fx:id="lblCatCount11" layoutX="14.0" layoutY="16.0" text="200 ">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="43.0" text="promotions">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <MaterialDesignIconView glyphName="CLOCK" layoutX="8.0" layoutY="182.0" />
+                        <HBox alignment="CENTER" layoutX="46.0" layoutY="91.0" spacing="5.0">
+                           <children>
+                              <JFXButton contentDisplay="TOP" text="export">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="FILE_EXPORT" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" text="import">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="FILE_IMPORT" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" text="print">
+                                 <graphic>
+                                    <MaterialDesignIconView glyphName="PRINTER" size="30" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </TilePane>
+            <StackPane>
+               <children>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     <content>
+                        <AnchorPane fx:id="scrollSecond" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <GridPane fx:id="gridPane" layoutX="300.0" layoutY="14.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Title" />
+                                    <Label alignment="TOP_LEFT" layoutX="10.0" layoutY="17.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Options filter" GridPane.rowIndex="1" />
+                                    <HBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <JFXButton id="button-success" onAction="#saveAction" text="Save">
+                                             <graphic>
+                                                <MaterialDesignIconView glyphName="CHECK" size="20" />
+                                             </graphic>
+                                          </JFXButton>
+                                          <JFXButton id="button-danger" onAction="#cancelAction" text="Cancel">
+                                             <graphic>
+                                                <MaterialDesignIconView glyphName="CLOSE" size="20" />
+                                             </graphic>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <VBox fx:id="vBoxOption" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="lblTitle" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane fx:id="importPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     <children>
+                        <JFXButton onAction="#browseAction" text="Select File" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

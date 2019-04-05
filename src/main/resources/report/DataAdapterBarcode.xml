@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beanDataAdapter class="net.sf.jasperreports.data.bean.BeanDataAdapterImpl">
+    <name>Barcode</name>
+    <factoryClass>configuration.Barcode</factoryClass>
+    <methodName>getItemList</methodName>
+    <useFieldDescription>false</useFieldDescription>
+</beanDataAdapter>
